@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playwrite+ES:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      </style>
+
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Refresh Me</h1>
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img class="img1" src="/dice6.png">
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img class="img2" src="/dice6.png">
+      </div>
+
+    </div>
+
+    <script src="/Dicee Challenge - Starting Files/script.js">
+      var randomNumber1 = Math.random();
+randomNumber1 = randomNumber1 * 6;
+randomNumber1 = Math.floor(randomNumber1) + 1;
+console.log(randomNumber1);
+
+var randomNumber2 = Math.random();
+randomNumber2 = randomNumber2 * 6;
+randomNumber2 = Math.floor(randomNumber2) + 1;
+console.log(randomNumber2);
+
+document.querySelector(".img1").setAttribute("src","/dice"+(randomNumber1)+".png");
+document.querySelector(".img2").setAttribute("src","/dice"+(randomNumber2)+".png");
+
+if (randomNumber1 > randomNumber2){
+  document.querySelector("h1").innerHTML = "Player 1 Wins 🚩"
+} else if(randomNumber1 < randomNumber2){
+      document.querySelector("h1").innerHTML = "Player 2 Wins 🚩"
+
+} else{
+      document.querySelector("h1").innerHTML = "Draw, Do it again 💀"
+
+}
+    </script>
+  </body>
+
+  <footer>
+    Made By : CodeWithKrish
+  </footer>
+</html>
